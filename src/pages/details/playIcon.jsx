@@ -1,4 +1,4 @@
-const PlayIcon = () => {
+const playIcon = () => {
     return (
         <svg
             version="1.1"
@@ -34,6 +34,6 @@ const PlayIcon = () => {
             ></circle>
         </svg>
     );
-};
+}
 
-export default PlayIcon
+export default playIcon
