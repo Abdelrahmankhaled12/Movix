@@ -10,7 +10,6 @@ import Details from './pages/details/Details'
 import Explore from "./pages/explore/Explore";
 import PageNotFount from "./pages/404/PageNotFount";
 import SearchResult from "./pages/searchResult/SearchResult";
-import React from "react";
 
 function App() {
 

@@ -2,7 +2,6 @@ import './style.scss'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import useFetch from '../../../hooks/useFetch'
-import { useSelector } from 'react-redux'
 import Img from '../../../components/lazyLoadImage/Img'
 import ContentWrapper from '../../../components/contentWrapper/ContentWrapper'
 
@@ -11,11 +10,10 @@ const HeroBanner = () => {
     const [background, setBackground] = useState("");
     const [query, setQuery] = useState("");
     const navigate = useNavigate();
-    const { url } = useSelector((state) => state.home)
     const { data, loading } = useFetch("/movie/upcoming")
 
     useEffect(() => {
-        const bg = url.backdrop + data?.results[Math.floor(Math.random() * 20)]?.backdrop_path;
+        const bg ="https://image.tmdb.org/t/p/original/" + data?.results[Math.floor(Math.random() * 20)]?.backdrop_path;
         setBackground(bg);
     }, [data])
 
